@@ -70,7 +70,7 @@ describe('leaf-grid', ->
     it('should be RTL friendly', ->
       grid = document.getElementById('fix6')
       piece = grid.querySelectorAll('.lf-grid__col--3-12')[3]
-      expect(piece.getBoundingClientRect().left).to.eql(0)
+      expect(Math.abs(piece.getBoundingClientRect().left)).to.eql(0)
     )
   )
 
@@ -91,8 +91,8 @@ describe('leaf-grid', ->
     it('should allow grid end align', ->
       grid = document.getElementById('fix9')
       piece = grid.querySelectorAll('.lf-grid__col--2-12')[2]
-      expect(piece.getBoundingClientRect().left.toPrecision(4))
-      .to.eql('833.3')
+      expect(piece.getBoundingClientRect().left.toPrecision(3))
+      .to.eql('833')
     )
   )
 
