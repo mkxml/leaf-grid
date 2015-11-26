@@ -43,8 +43,8 @@ We write CSS through [SCSS]() so please edit only the code inside the `src` fold
 
 We have two simple rules when writing SCSS:
 
-  1. Follow MDO Code Guide.
-  2. Follow hyphenated BEM syntax.
+  1. Follow CSS part of [MDO's Code Guide](http://codeguide.co/).
+  2. Follow [hyphenated BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/).
 
 That's it for code style.
 
