@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>leaf-grid Browser Tests</title>
+  <link href="../bower_components/mocha/mocha.css" rel="stylesheet">
+  <link href="leaf-grid.css" rel="stylesheet">
+  <style media="screen">
+    #fixture {
+      width: 1000px;
+    }
+  </style>
+</head>
+<body>
+  <div id="mocha"></div>
+  <div id="fixture">
+    <h1>leaf-grid demo</h1>
+    <div class="lf-grid" id="fix1">
+      <div class="lf-grid__col--12-12">
+        <div class="box red"></div>
+      </div>
+      <div class="lf-grid__col--6-12">
+        <div class="box red"></div>
+      </div>
+      <div class="lf-grid__col--6-12">
+        <div class="box red"></div>
+      </div>
+      <div class="lf-grid__col--4-12">
+        <div class="box red"></div>
+      </div>
+      <div class="lf-grid__col--4-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--4-12">
+        <div class="box red"></div>
+      </div>
+      <div class="lf-grid__col--3-12">
+        <div class="box red"></div>
+      </div>
+      <div class="lf-grid__col--3-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--3-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--3-12">
+        <div class="box red"></div>
+      </div>
+      <div class="lf-grid__col--2-12">
+        <div class="box red"></div>
+      </div>
+      <div class="lf-grid__col--2-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--2-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--2-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--2-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--2-12">
+        <div class="box red"></div>
+      </div>
+      <div class="lf-grid__col--1-12">
+        <div class="box red"></div>
+      </div>
+      <div class="lf-grid__col--1-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--1-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--1-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--1-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--1-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--1-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--1-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--1-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--1-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--1-12">
+        <div class="box lightblue"></div>
+      </div>
+      <div class="lf-grid__col--1-12">
+        <div class="box red"></div>
+      </div>
+    </div>
+    <h1>Gutters with boxes</h1>
+    <div class="lf-grid" id="fix2">
+      <div class="lf-grid__col--12-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>Full</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--6-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>1/2</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--6-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>1/2</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--4-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>1/3</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--4-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>1/3</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--4-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>1/3</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>Nested grid</h1>
+    <div class="lf-grid" id="fix3">
+      <div class="lf-grid__col--12-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <div class="lf-grid">
+              <div class="lf-grid__col--6-12">
+                <div class="lf-grid__box">
+                  <div class="light round">
+                    <h1>1/2</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="lf-grid__col--6-12">
+                <div class="lf-grid__box">
+                  <div class="light round">
+                    <h1>1/2</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>Responsive grid</h1>
+    <div class="lf-grid" id="fix4">
+      <div class="lf-grid__col--12-12 lf-grid__col--sm-6-12 lf-grid__col--lg-3-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>Home</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--12-12 lf-grid__col--sm-6-12 lf-grid__col--lg-3-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>Info</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--12-12 lf-grid__col--sm-6-12 lf-grid__col--lg-3-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>About</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--12-12 lf-grid__col--sm-6-12 lf-grid__col--lg-3-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>Contact</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>Vertical grid</h1>
+    <div class="vertical-box lf-grid lf-grid--vertical" id="fix5">
+      <div class="lf-grid__col--4-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>1</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--4-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>2</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--4-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>3</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--4-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>4</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--4-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>5</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--4-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>6</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>RTL</h1>
+    <div id="fix6" class="lf-grid" style="direction: rtl;">
+      <div class="lf-grid__col--3-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>Home</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--3-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>Info</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--3-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>About</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--3-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>Contact</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>Grid config</h1>
+    <h2>Default</h2>
+    <div class="lf-grid" id="fix7">
+      <div class="lf-grid__col--2-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>1</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--2-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>2</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--2-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>3</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Center</h2>
+    <div class="lf-grid lf-grid--center" id="fix8">
+      <div class="lf-grid__col--2-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>1</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--2-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>2</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--2-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>3</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Reverse</h2>
+    <div class="lf-grid lf-grid--reverse" id="fix9">
+      <div class="lf-grid__col--2-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>1</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--2-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>2</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--2-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>3</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>Priority ordering</h1>
+    <div class="lf-grid" id="fix10">
+      <div class="lf-grid__col--2-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>1</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--2-12">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>2</h1>
+          </div>
+        </div>
+      </div>
+      <div class="lf-grid__col--2-12 lf-grid__col--important">
+        <div class="lf-grid__box">
+          <div class="round">
+            <h1>3</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../bower_components/mocha/mocha.js"></script>
+  <script>mocha.setup('bdd')</script>
+  <script src="../bower_components/chai/chai.js"></script>
+  <script src="testBundle.js"></script>
+  <script>
+    onload = function(){
+      var runner = mocha.run();
+
+      var failedTests = [];
+      runner.on('end', function(){
+        window.mochaResults = runner.stats;
+        window.mochaResults.reports = failedTests;
+      });
+
+      runner.on('fail', logFailure);
+
+      function logFailure(test, err){
+
+        var flattenTitles = function(test){
+          var titles = [];
+          while (test.parent.title){
+            titles.push(test.parent.title);
+            test = test.parent;
+          }
+          return titles.reverse();
+        };
+
+        failedTests.push({name: test.title, result: false, message: err.message, stack: err.stack, titles: flattenTitles(test) });
+      };
+    };
+  </script>
+</body>
+</html>
