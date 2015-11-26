@@ -1,0 +1,31 @@
+{
+  "name": "leaf-grid",
+  "version": "0.1.0",
+  "authors": [
+    "Matheus Kautzmann <matheus@fluidrobot.com>"
+  ],
+  "description": "Leaf UI's grid",
+  "main": [
+    "dist/leaf-grid.min.css"
+  ],
+  "keywords": [
+    "grid",
+    "leaf",
+    "UI"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/leafui/leaf-grid",
+  "ignore": [
+    "**/.*",
+    "scss-lint.yml",
+    "Gruntfile.coffee",
+    "CONTRIBUTING.md",
+    "node_modules",
+    "test",
+    "demo"
+  ],
+  "devDependencies": {
+    "chai": "~3.4.1",
+    "mocha": "~2.3.4"
+  }
+}

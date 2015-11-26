@@ -1,0 +1,14 @@
+machine:
+  node:
+    version: 4.1.0
+  ruby:
+    version: 2.2.3
+dependencies:
+  override:
+    - gem install bundler
+    - npm install -g grunt-cli
+    - npm install -g bower
+    - SAUCE_CONNECT_DOWNLOAD_ON_INSTALL=true npm install
+test:
+  override:
+    - grunt ci
