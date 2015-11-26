@@ -1,5 +1,10 @@
 # <a href="#" id="top"></a>leaf-grid
 
+[![Build]](https://circleci.com/gh/leafui/leaf-grid/tree/master) [![SemVer]](http://semver.org/)
+[![License]](LICENSE)
+
+[![Tests](https://saucelabs.com/browser-matrix/leafui.svg)](https://saucelabs.com/u/leafui)
+
 Part of the core of the Leaf UI.
 
 Pure CSS 12-column, responsive mobile-first grid.
@@ -331,3 +336,7 @@ We test support on most evergreen browsers with [Sauce Labs](https://saucelabs.c
 ## <a href="#" id="license"></a>License
 
 [MIT License](LICENSE)
+
+[Build]: https://img.shields.io/circleci/project/leafui/leaf-grid/master.svg
+[SemVer]: https://img.shields.io/:semver-%E2%9C%93-brightgreen.svg
+[License]: https://img.shields.io/github/license/leafui/leaf-grid.svg
