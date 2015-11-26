@@ -326,7 +326,7 @@ We test support on most evergreen browsers with [Sauce Labs](https://saucelabs.c
 
 | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_64x64.png" width="32px" height="32px"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/internet-explorer/internet-explorer_64x64.png" width="32px" height="32px"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_64x64.png" width="32px" height="32px"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_64x64.png" width="32px" height="32px"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_64x64.png" width="32px" height="32px"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/edge/edge_64x64.png" width="32px" height="32px">  | Android | iOS |
 | :---:  |:---:|  :---:  | :---: | :---:  | :---:|  :---:  |:---:|
-|   21+  | 10+ |   20+   |  12+  |   6+   |  12+ |   4.1+  |  7+ |
+|   21+  | 10+ |   20+   |  12+  |   6+   |  12+ |   4.4+  |  7+ |
 
 ## <a href="#" id="license"></a>License
 
