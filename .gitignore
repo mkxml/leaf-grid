@@ -1,0 +1,20 @@
+# Ignore basic OS files
+.DS_Store
+Thumbs.db
+
+# Ignore node dependencies
+node_modules
+
+# Ignore bower dependencies
+bower_components
+
+# Ignore npm files
+npm-debug.log
+
+# Ignore sass cache
+.sass-cache
+
+# Ignore docs and compiled test code, generate locally if needed
+docs
+test/testBundle.js
+test/testBundle.js.map
