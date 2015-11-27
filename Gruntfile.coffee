@@ -130,6 +130,20 @@ module.exports = (grunt) ->
       }
     }
 
+    # Put banner in dist files
+    usebanner: {
+      taskName: {
+        options: {
+          position: 'top',
+          banner: '/*<%=pkg.name %>@<%=pkg.version%>*/',
+          linebreak: true
+        },
+        files: {
+          src: ['dist/*.css']
+        }
+      }
+    }
+
     # Generate docs
     sassdoc: {
       default: {
@@ -221,6 +235,7 @@ module.exports = (grunt) ->
     'postcss:distDev'
     'postcss:distProd'
     'docs'
+    'usebanner'
   ])
   if process.env.CI
     grunt.registerTask('ci', [
