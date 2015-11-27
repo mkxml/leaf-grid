@@ -17,12 +17,15 @@
   "homepage": "https://github.com/leafui/leaf-grid",
   "ignore": [
     "**/.*",
-    "scss-lint.yml",
-    "Gruntfile.coffee",
+    "coffeelint.json",
     "CONTRIBUTING.md",
+    "demo",
+    "Gemfile.lock",
+    "Gemfile",
+    "Gruntfile.coffee",
     "node_modules",
-    "test",
-    "demo"
+    "scss-lint.yml",
+    "test"
   ],
   "devDependencies": {
     "chai": "~3.4.1",
