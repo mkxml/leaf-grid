@@ -15,7 +15,7 @@ Pull requests are great if you want to contribute with code or documentation. To
 
 ### Building the project
 
-This project is mainly written in SASS with version managed by [bundler]() and we use `scss-lint` so make sure you have Ruby installed and `bundler` as well.
+This project is mainly written in SASS with version managed by [bundler](http://bundler.io/) and we use `scss-lint` so make sure you have Ruby installed and `bundler` as well.
 
 If you don't have bundler just run:
 
@@ -39,7 +39,7 @@ And there you go, you have a working version of `leaf-grid` in the `dist` folder
 
 ### Writing code
 
-We write CSS through [SCSS]() so please edit only the code inside the `src` folder.
+We write CSS through [SCSS](http://sass-lang.com/guide) so please edit only the code inside the `src` folder.
 
 We have two simple rules when writing SCSS:
 
