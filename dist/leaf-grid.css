@@ -1,4 +1,4 @@
-/*leaf-grid@0.1.0*/
+/*leaf-grid@0.1.1*/
 .lf-grid {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12,12 +12,6 @@
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-align-content: flex-start;
-      -ms-flex-line-pack: start;
-          align-content: flex-start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 .lf-grid--vertical {
