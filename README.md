@@ -29,9 +29,9 @@ As with other Leaf core components this one is written in SCSS and uses [hyphena
 
 We kept the grid very simple with no fancy features you may find elsewhere. You have twelve columns to use and no gutters.
 
-#### Why no gutters!?
+#### Gutters!
 
-We opt to not include gutter support for now, but you can simulate gutters [using boxes](#usingboxes). Beware that boxes will include padding in all directions.
+Since version `0.2.0` gutters are now part of `leaf-grid`! Beware that `lf-grid__box` is now deprecated.
 
 ## <a href="#" id="usage"></a>Usage
 
@@ -313,11 +313,24 @@ Let's see:
 </div>
 ```
 
-### <a href="#" id="usingboxes"></a>Using boxes
+### <a href="#" id="gutters"></a>Gutters
 
-Boxes are special entities that create a `1em` padding on all directions. They can be used to simulate gutters or to create a white space between grid elements.
+Since version `0.2.0` the project support the usage of gutters. Previously we used box to simulated gutter behavior but turns out that's not that useful since you can have fairly complex usability in grids.
 
-**Notice:** as it's `em` you can change the padding by changing the `font-size` on the parent element.
+So now to use gutters you just have to declare your `lf-grid` with the `with-gutter` modifier. Your columns will follow automatically.
+
+```html
+<div class="lf-grid lf-grid--with-gutter">
+  <div class="lf-grid__col--6-12">
+    <p>1/2 with gutter</p>
+  </div>
+  <div class="lf-grid__col--6-12">
+    <p>1/2 with gutter</p>
+  </div>
+</div>
+```
+
+Notice that this new implementation removes the space on the border of the grid, thus allowing you to have consistent spacing across the whole page.
 
 ## <a href="#" id="demo"></a>Demo
 
