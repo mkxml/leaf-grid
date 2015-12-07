@@ -5,6 +5,15 @@
   justify-content: flex-start;
 }
 
+.lf-grid--with-gutter {
+  margin-left: -1rem;
+  margin-bottom: -1rem;
+}
+.lf-grid--with-gutter > [class*="lf-grid__col"] {
+  box-sizing: border-box;
+  padding: 0 0 1rem 1rem;
+}
+
 .lf-grid--vertical {
   flex-direction: column;
 }
@@ -290,10 +299,6 @@
 
 .lf-grid__col--important {
   order: -1;
-}
-
-.lf-grid__box {
-  padding: 1em;
 }
 
 /*# sourceMappingURL=leaf-grid.css.map */
