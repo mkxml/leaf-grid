@@ -36,14 +36,18 @@ describe('leaf-grid', ->
   describe('gutter grid', ->
     it('should insert inner margin on all sides', ->
       grid = document.getElementById('fix2')
-      innerBox = grid.querySelector('.lf-grid__box').children[0]
-      expect(innerBox.getBoundingClientRect().left).to.be.above(0)
+      gutterSize = 16
+      firstBox = grid.querySelectorAll('.lf-grid__box')[1]
+      secondBox = grid.querySelectorAll('.lf-grid__box')[2]
+      firstBoxWidth = firstBox.getBoundingClientRect().width
+      secondBoxLeft = secondBox.getBoundingClientRect().left
+      expect(secondBoxLeft).to.be.eql(firstBoxWidth + gutterSize)
     )
 
     it('should respect nested grids', ->
       grid = document.getElementById('fix3')
       innerGrid = grid.querySelector('.lf-grid')
-      expect(innerGrid.getBoundingClientRect().left).to.be.above(0)
+      expect(innerGrid.getBoundingClientRect().left).to.be.below(0)
     )
   )
 
