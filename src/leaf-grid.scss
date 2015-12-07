@@ -50,6 +50,17 @@ $wide-desktop: 80rem; // 1280px when font size is 16px
   justify-content: flex-start;
 }
 
+// Delcare the gutter modifier and apply the gutters to related children
+.lf-grid--with-gutter {
+  margin-left: -1rem;
+  margin-bottom: -1rem;
+
+  > [class*="lf-grid__col"] {
+    box-sizing: border-box;
+    padding: 0 0 1rem 1rem;
+  }
+}
+
 // Grid modifiers
 .lf-grid--vertical { flex-direction: column; }
 .lf-grid--reverse { justify-content: flex-end; }
@@ -103,12 +114,7 @@ $wide-desktop: 80rem; // 1280px when font size is 16px
   }
 }
 
-
-// Column modifiers
 .lf-grid__col--fit { flex: 1 0 (0% + 100/$number-of-columns); }
 .lf-grid__col--center { align-self: center; }
 .lf-grid__col--end { align-self: flex-end; }
 .lf-grid__col--important { order: -1; }
-
-// Declare a box e.g a container with padding
-.lf-grid__box { padding: 1em; }
