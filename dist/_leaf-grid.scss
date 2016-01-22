@@ -1,0 +1,141 @@
+/*leaf-grid@0.3.0*/
+////
+/// leaf-grid
+/// Leaf's lightweight, 12-column, mobile-first and responsive grid.
+/// MIT License
+/// @group leaf-grid
+/// @author Matheus R. Kautzmann <matheus@fluidrobot.com>
+////
+
+/// Number of columns of the grid
+/// @type Number
+/// @access public
+/// @since 0.1.0
+$number-of-columns: 12;
+
+/// Grid's gutter size
+/// @type REM units
+/// @access public
+/// @since 0.1.0
+$gutter-size: 1rem;
+
+/// Large smartphone breakpoint
+/// @type REM units
+/// @access public
+/// @since 0.1.0
+$large-phone: 35.5rem; // 568px when font size is 16px
+
+/// Vertical tablet breakpoint
+/// @type REM units
+/// @access public
+/// @since 0.1.0
+$v-tablet: 48rem; // 768px when font size is 16px
+
+/// Horizontal tablet / small desktop breakpoint
+/// @type REM units
+/// @access public
+/// @since 0.1.0
+$h-tablet: 64rem; // 1024px when font size is 16px
+
+/// Wide desktop / TV breakpoint
+/// @type REM units
+/// @access public
+/// @since 0.1.0
+$wide-desktop: 80rem; // 1280px when font size is 16px
+
+// Declare the grid using flexbox
+.lf-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+// Delcare the gutter modifier and apply the gutters to related children
+.lf-grid--with-gutter {
+  margin-left: -1rem;
+  margin-bottom: -1rem;
+
+  > [class*="lf-grid__col"] {
+    box-sizing: border-box;
+    padding: 0 0 1rem 1rem;
+  }
+}
+
+// Grid modifiers
+.lf-grid--vertical { flex-direction: column; }
+.lf-grid--reverse { justify-content: flex-end; }
+.lf-grid--center { justify-content: center; }
+.lf-grid--cross-center { align-items: center; }
+.lf-grid--stretch { align-items: stretch; }
+
+// Column properties
+[class*="lf-grid__col"] {
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+// Generate default columns
+@for $i from 1 through $number-of-columns {
+  $size: 0% + ((100/$number-of-columns) * $i);
+
+  .lf-grid__col--#{$i}-12 {
+    flex-basis: $size;
+    max-width: $size;
+  }
+}
+
+// Generate columns for $large-phone
+@media all and (min-width: $large-phone) {
+  @for $i from 1 through $number-of-columns {
+    $size: 0% + ((100/$number-of-columns) * $i);
+
+    .lf-grid__col--sm-#{$i}-#{$number-of-columns} {
+      flex-basis: $size;
+      max-width: $size;
+    }
+  }
+}
+
+// Generate columns for $v-tablet
+@media all and (min-width: $v-tablet) {
+  @for $i from 1 through $number-of-columns {
+    $size: 0% + ((100/$number-of-columns) * $i);
+
+    .lf-grid__col--md-#{$i}-#{$number-of-columns} {
+      flex-basis: $size;
+      max-width: $size;
+    }
+  }
+}
+
+// Generate columns for $h-tablet
+@media all and (min-width: $h-tablet) {
+  @for $i from 1 through $number-of-columns {
+    $size: 0% + ((100/$number-of-columns) * $i);
+
+    .lf-grid__col--lg-#{$i}-#{$number-of-columns} {
+      flex-basis: $size;
+      max-width: $size;
+    }
+  }
+}
+
+// Generate columns for $wide-desktop
+@media all and (min-width: $wide-desktop) {
+  @for $i from 1 through $number-of-columns {
+    $size: 0% + ((100/$number-of-columns) * $i);
+
+    .lf-grid__col--xl-#{$i}-#{$number-of-columns} {
+      flex-basis: $size;
+      max-width: $size;
+    }
+  }
+}
+
+.lf-grid__col--fit { flex: 1 0 (0% + 100/$number-of-columns); }
+.lf-grid__col--center { align-self: center; }
+.lf-grid__col--end { align-self: flex-end; }
+.lf-grid__col--important { order: -1; }
