@@ -32,7 +32,7 @@ We rely heavily on [grunt](http://gruntjs.com/) and [bower](http://bower.io/), p
 To build the project follow the steps on your terminal of choice:
 
  1. Clone the project and `cd` to the root folder.
- 2. Run `npm install`
+ 2. Run `npm install && bower install && bundler install`
  3. Run `grunt build`
 
 And there you go, you have a working version of `leaf-grid` in the `dist` folder and the full documentation in the `docs` folder.
