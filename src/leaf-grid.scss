@@ -79,14 +79,22 @@ $wide-desktop: 80rem; // 1280px when font size is 16px
 // Generate default columns
 @for $i from 1 through $number-of-columns {
   $size: 0% + ((100/$number-of-columns) * $i);
-  .lf-grid__col--#{$i}-12 { flex-basis: $size; }
+
+  .lf-grid__col--#{$i}-12 {
+    flex-basis: $size;
+    max-width: $size;
+  }
 }
 
 // Generate columns for $large-phone
 @media all and (min-width: $large-phone) {
   @for $i from 1 through $number-of-columns {
     $size: 0% + ((100/$number-of-columns) * $i);
-    .lf-grid__col--sm-#{$i}-#{$number-of-columns} { flex-basis: $size; }
+
+    .lf-grid__col--sm-#{$i}-#{$number-of-columns} {
+      flex-basis: $size;
+      max-width: $size;
+    }
   }
 }
 
@@ -94,7 +102,11 @@ $wide-desktop: 80rem; // 1280px when font size is 16px
 @media all and (min-width: $v-tablet) {
   @for $i from 1 through $number-of-columns {
     $size: 0% + ((100/$number-of-columns) * $i);
-    .lf-grid__col--md-#{$i}-#{$number-of-columns} { flex-basis: $size; }
+
+    .lf-grid__col--md-#{$i}-#{$number-of-columns} {
+      flex-basis: $size;
+      max-width: $size;
+    }
   }
 }
 
@@ -102,7 +114,11 @@ $wide-desktop: 80rem; // 1280px when font size is 16px
 @media all and (min-width: $h-tablet) {
   @for $i from 1 through $number-of-columns {
     $size: 0% + ((100/$number-of-columns) * $i);
-    .lf-grid__col--lg-#{$i}-#{$number-of-columns} { flex-basis: $size; }
+
+    .lf-grid__col--lg-#{$i}-#{$number-of-columns} {
+      flex-basis: $size;
+      max-width: $size;
+    }
   }
 }
 
@@ -110,7 +126,11 @@ $wide-desktop: 80rem; // 1280px when font size is 16px
 @media all and (min-width: $wide-desktop) {
   @for $i from 1 through $number-of-columns {
     $size: 0% + ((100/$number-of-columns) * $i);
-    .lf-grid__col--xl-#{$i}-#{$number-of-columns} { flex-basis: $size; }
+
+    .lf-grid__col--xl-#{$i}-#{$number-of-columns} {
+      flex-basis: $size;
+      max-width: $size;
+    }
   }
 }
 
