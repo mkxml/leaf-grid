@@ -19,6 +19,10 @@ We recommend using [Bower](http://bower.io/) to manage front-end dependencies:
 
 If you don't use bower you can manually use it by just grabbing the file inside the `dist` folder.
 
+Also available on [NPM](http://npmjs.com):
+
+`npm install leaf-grid`
+
 ## <a href="#" id="impl"></a>Details on implementation
 
 ### Leaf philosophy

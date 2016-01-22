@@ -3,10 +3,22 @@
   "version": "0.2.0",
   "description": "12-column, mobile first and responsive grid",
   "keywords": "grid, leaf, ui",
-  "author": "Matheus R. Kautzmann",
-  "publish": false,
+  "homepage": "https://github.com/leafui/leaf-grid",
+  "author": {
+    "name": "Matheus R. Kautzmann",
+    "email": "matheus@fluidrobot.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leafui/leaf-grid"
+  },
+  "bugs": {
+    "url": "https://github.com/leafui/leaf-grid/issues"
+  },
+  "license": "MIT",
+  "main": "dist/leaf-grid.min.css",
   "scripts": {
-    "install": "bower install && bundle install"
+    "test": "grunt test"
   },
   "devDependencies": {
     "autoprefixer": "~6.1.1",
@@ -19,6 +31,7 @@
     "grunt-contrib-clean": "~0.7.0",
     "grunt-contrib-coffee": "~0.13.0",
     "grunt-contrib-connect": "~0.11.2",
+    "grunt-contrib-copy": "~0.8.2",
     "grunt-contrib-sass": "~0.9.2",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-http-server": "~1.13.0",
